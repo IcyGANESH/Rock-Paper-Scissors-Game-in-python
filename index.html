@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Rock Paper Scissors</h1>
+    <div id="nameInput">
+      <label for="name">Enter your good name please:</label>
+      <input type="text" id="name" />
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="gameSection" class="hidden">
+      <p id="greeting"></p>
+      <button onclick="showRules()">Show Rules</button>
+      <div id="rules" class="hidden">
+        <p>Rules:<br>
+        - Choose one: Rock, Paper, or Scissor.<br>
+        - Rock beats Scissor, Scissor beats Paper, Paper beats Rock.<br>
+        - Good luck!</p>
+      </div>
+
+      <div id="choices">
+        <button onclick="play(-1)">Rock</button>
+        <button onclick="play(0)">Paper</button>
+        <button onclick="play(1)">Scissor</button>
+      </div>
+
+      <div id="result" class="hidden">
+        <p id="userChoice"></p>
+        <p id="compChoice"></p>
+        <h3 id="outcome"></h3>
+        <button onclick="resetGame()">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
